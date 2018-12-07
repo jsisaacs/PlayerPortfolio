@@ -26,7 +26,7 @@ SECRET_KEY = '-qyh!-vle!qzb^*q$pvnpqeelqjdo*g$*64^x5ops4-@w2#=_('
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://polar-cove-39344.herokuapp.com'
+    '.herokuapp.com'
 ]
 
 
