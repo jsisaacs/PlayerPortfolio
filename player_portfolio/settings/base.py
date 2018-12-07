@@ -31,8 +31,9 @@ ALLOWED_HOSTS = [
     'localhost', 
     '127.0.0.1', 
     'player-portfolio.com', 
-    'www.player-portfolio.com'
-    '.herokudns.com'
+    'www.player-portfolio.com',
+    '.herokudns.com',
+    'cubed-swan-6175bge0s3p9qc7lgin8l0sd.herokudns.com'
 ]
 
 
