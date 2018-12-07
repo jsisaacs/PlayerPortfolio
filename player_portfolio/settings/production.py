@@ -26,7 +26,13 @@ SECRET_KEY = '-qyh!-vle!qzb^*q$pvnpqeelqjdo*g$*64^x5ops4-@w2#=_('
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '.herokuapp.com', '0.0.0.0', 'localhost', '127.0.0.1', '.player-portfolio.com', '.herokudns.com'
+    '.herokuapp.com',
+    '0.0.0.0',
+    'localhost', 
+    '127.0.0.1', 
+    'player-portfolio.com', 
+    'www.player-portfolio.com'
+    '.herokudns.com'
 ]
 
 
