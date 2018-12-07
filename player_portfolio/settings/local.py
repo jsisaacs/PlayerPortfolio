@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     '0.0.0.0',
     'localhost', 
     '127.0.0.1', 
+    '.player-portfolio.com',
     'player-portfolio.com', 
     'www.player-portfolio.com',
     '.herokudns.com',
