@@ -5,9 +5,23 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-    Test: {{ user.first_name }}
-    Hi {{ user.username }}!
-    <p><a href="{% url 'logout' %}">logout</a></p>
+    <body>
+        <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-dark">
+                <nav class="my-0 mr-md-auto">
+                    <a class="navbar-brand text-light" href="{% url 'home' %}">
+                        <img id="landing_page_emblem" src="{% static 'pp_emblem.png' %}" width="" height="30" class="d-inline-block align-top" alt="">
+                        <b>Player Portfolio</b>
+                        <span class="badge badge-pill badge-warning">beta</span>
+                    </a>
+                </nav>    
+                <nav class="my-2 my-md-0 mr-md-3">
+                    <span class="text-light navbar-text">
+                        {{ user.first_name }}
+                    </span>
+                </nav>
+                <a class="btn btn-outline-light" href="{% url 'logout' %}">Log Out</a>
+            </div>
+    </body>
 {% else %}
     {% block landing_page %}
     <body>
@@ -66,9 +80,8 @@
                 </div>
               </div>
         
-
         <!-- Scoring -->
-        <div id="scoring" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white bg-primary">
+        <div id="scoring" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white bg-secondary">
                 <div class="col-md-5 p-lg-5 mx-auto my-5">
                   <h2 class="display-4 font-weight-bold">Scoring</h2>
                   <!-- TODO -->
