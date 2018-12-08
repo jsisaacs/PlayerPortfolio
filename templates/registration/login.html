@@ -1,12 +1,49 @@
-{% extends 'base.html' %}
+{% extends 'foundation.html' %}
+{% load static %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Log In{% endblock %}
 
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+<body id="login_body">
+    <img id="pp_logo" class="d-block mx-auto mb-4" src="{% static 'pp-logo.png' %}" alt="Player Portfolio" height=120px>
+    <div id="form_container">
+        <form id="login_form" method="post">
+            {% if form.errors %}
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error|escape }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error|escape }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% csrf_token %}
+            <h2 id="login_header" class="text-center form-title">Log In</h2>
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" maxlength="150" placeholder="Username" autofocus="" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="">
+            </div>
+            <button id="login_button" class="btn btn-dark btn-block" type="submit">Sign In</button>
+            <div id="login_alternative" class="text-center">
+                <p class="text-muted">
+                    <small>
+                        Don't have an account yet? <a class="text-primary" href="{% url 'signup' %}"><u>Sign Up</u></a>
+                    </small>
+                </p>
+            </div>
+        </form>
+    </div>
+    <!-- <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Log In</button>
+    </form> -->
+</body>
 {% endblock %}

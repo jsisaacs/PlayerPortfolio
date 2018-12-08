@@ -8,6 +8,20 @@
     <img id="pp_logo" class="d-block mx-auto mb-4" src="{% static 'pp-logo.png' %}" alt="Player Portfolio" height=120px>
     <div id="form_container">
         <form id="signup_form" method="post">
+            {% if form.errors %}
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error|escape }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error|escape }}
+                    </div>
+                {% endfor %}
+            {% endif %}
             {% csrf_token %}
             <h2 id="signup_header" class="text-center form-title">Sign Up</h2>
             <div class="form-row">
@@ -32,7 +46,14 @@
             <div class="form-group">
                 <input type="password" class="form-control" name="password2" placeholder="Confirm Password" required="">    
             </div>
-            <button id=signup_button class="btn btn-dark btn-block" type="submit">Sign up</button>
+            <button id="signup_button" class="btn btn-dark btn-block" type="submit">Sign Up</button>
+            <div id="signin_alternative" class="text-center">
+                <p class="text-muted">
+                    <small>
+                        Already have an account? <a class="text-primary" href="{% url 'login' %}"><u>Log In</u></a>
+                    </small>
+                </p>
+            </div>
         </form>
     </div>
 </body>
