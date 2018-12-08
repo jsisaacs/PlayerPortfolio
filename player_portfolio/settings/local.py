@@ -86,10 +86,21 @@ WSGI_APPLICATION = 'player_portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd8ni9hm07ds3ak',
+        'USER': 'itcclfhjyslkgw',
+        'PASSWORD': 'ed7d0ee347e914aef3333971636ebc88f7181ca57a2ef2425d4e7c89e8c761f7',
+        'HOST': 'ec2-54-235-156-60.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

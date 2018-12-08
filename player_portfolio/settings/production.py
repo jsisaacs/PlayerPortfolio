@@ -89,13 +89,18 @@ WSGI_APPLICATION = 'player_portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgres',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd8ni9hm07ds3ak',
+        'USER': 'itcclfhjyslkgw',
+        'PASSWORD': 'ed7d0ee347e914aef3333971636ebc88f7181ca57a2ef2425d4e7c89e8c761f7',
+        'HOST': 'ec2-54-235-156-60.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+# import dj_database_url
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
