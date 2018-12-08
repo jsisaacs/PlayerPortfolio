@@ -5,7 +5,9 @@
 
 {% block content %}
 <body id="signup_body">
-    <img id="pp_logo" class="d-block mx-auto mb-4" src="{% static 'pp-logo.png' %}" alt="Player Portfolio" height=120px>
+    <a href="{% url 'home' %}">
+        <img id="pp_logo" class="d-block mx-auto mb-4" src="{% static 'pp-logo.png' %}" alt="Player Portfolio" height=120px>
+    </a>
     <div id="form_container">
         <form id="signup_form" method="post">
             {% if form.errors %}

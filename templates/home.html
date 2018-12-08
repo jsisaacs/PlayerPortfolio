@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'foundation.html' %}
 {% load static %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Player Portfolio{% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
@@ -9,8 +9,121 @@
     Hi {{ user.username }}!
     <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
-    <p>You are not logged in</p>
-    <a href="{% url 'login' %}">login</a> |
-    <a href="{% url 'signup' %}">signup</a>
+    {% block landing_page %}
+    <body>
+        <!-- Navigation -->
+        <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-dark">
+            <nav class="my-0 mr-md-auto">
+                <a class="navbar-brand text-light" href="{% url 'home' %}">
+                    <img id="landing_page_emblem" src="{% static 'pp_emblem.png' %}" width="" height="30" class="d-inline-block align-top" alt="">
+                    <b>Player Portfolio</b>
+                    <span class="badge badge-pill badge-warning">beta</span>
+                </a>
+            </nav>    
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-light" href="#how_it_works">How It Works</a>
+                <a class="p-2 text-light" href="#scoring">Scoring</a>
+                <a class="p-2 text-light" href="#faq">FAQ</a>
+                <a class="p-2 text-light" href="#support">Support</a>
+            </nav>
+            <a class="btn btn-outline-light" href="{% url 'login' %}">Log In</a>
+        </div>
+
+        <!-- Masthead -->
+        <div id="masthead" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="">
+                <div class="col-md-5 p-lg-5 mx-auto my-5">
+                  <h1 class="display-4 font-weight-bold">Fantasy Sports.</h1>
+                  <h1 class="display-4 font-weight-bold">Elevated.</h1>
+                  <p class="lead font-weight-normal">The marketplace for a fantasy player's real value.</p>
+                  <a class="btn btn-primary" href="{% url 'signup' %}">Sign Up</a>
+                </div>
+              </div>
+        
+
+        <!-- Features -->
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+                <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                  <div class="my-3 py-3">
+                    <h2 class="display-5">Feature Title #1</h2>
+                    <p class="lead">Feature explanation goes here.</p>
+                  </div>
+                  <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+                </div>
+                <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                  <div class="my-3 p-3">
+                    <h2 class="display-5">Feature Title #2</h2>
+                    <p class="lead">Feature explanation goes here.</p>
+                  </div>
+                  <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+                </div>
+              </div>
+
+        <!-- How It Works -->
+        <div id="how_it_works" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="">
+                <div class="col-md-5 p-lg-5 mx-auto my-5">
+                  <h2 class="display-4 font-weight-bold">How It Works</h2>
+                  <!-- TODO -->
+                </div>
+              </div>
+        
+
+        <!-- Scoring -->
+        <div id="scoring" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white bg-primary">
+                <div class="col-md-5 p-lg-5 mx-auto my-5">
+                  <h2 class="display-4 font-weight-bold">Scoring</h2>
+                  <!-- TODO -->
+                </div>
+              </div>
+
+        <!-- FAQ -->
+        <div id="faq" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="">
+                <div class="col-md-5 p-lg-5 mx-auto my-5">
+                  <h2 class="display-4 font-weight-bold">FAQ</h2>
+                  <!-- TODO -->
+                </div>
+              </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark fluid-container py-5">
+                <div class="text-center row">
+                  <div class="col-12 col-md">
+                    <img src="{% static 'pp-logo.png' %}" height="48" alt="Player Portfolio Logo">
+                    <small class="d-block mb-3 text-light">© 2018</small>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5 class="text-white">Company</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-light" href="#">About</a></li>
+                      <li><a class="text-light" href="#">Careers</a></li>
+                      <li><a class="text-light" href="#">Press</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5 class="text-white">Notices</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-light" href="#">Terms of Use</a></li>
+                      <li><a class="text-light" href="#">Privacy Policy</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5 class="text-white">Social Media</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-light" href="#">Facebook</a></li>
+                      <li><a class="text-light" href="#">Instagram</a></li>
+                      <li><a class="text-light" href="#">Twitter</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md">
+                        <h5 id="support" class="text-white">Support</h5>
+                        <ul class="list-unstyled text-small">
+                            <address>
+                                <!-- TODO -->
+                            </address>
+                        </ul>
+                  </div>
+                </div>
+              </footer>
+    </body>
+    {% endblock %}
 {% endif %}
 {% endblock %}
