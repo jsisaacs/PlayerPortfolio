@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -92,10 +93,6 @@ DATABASES = {
     }
 }
 
-import dj_database_url
-db_from_env = dj_database_url.config(default='postgres://mjinyjlvrpapbi:aa25f85acfe62010c9b1b0327da691c59c91e800851a41c962f2c6ae26cc523d@ec2-184-72-239-186.compute-1.amazonaws.com:5432/d2l35v5rflqin7')
-DATABASES['default'].update(db_from_env)
-
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
@@ -120,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
