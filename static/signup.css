@@ -4,18 +4,13 @@
 
 #signup_body {
     background-image: -webkit-linear-gradient(-90deg, #303d99 0%, #537dd1 59%, #5fb9e7 100%);
-    /* background-color: red; */
-    /* margin-top: 100px; */
-    /* margin-bottom: 50px; */
-    /* overflow-y: auto; */
-    /* height: 100%; */
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    padding-top: 25px;
 }
 
 #form_container {
-    padding-top: 100px;
     height: 100%;
     padding-bottom: 50px;
 }

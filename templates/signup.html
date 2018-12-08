@@ -1,9 +1,11 @@
 {% extends 'foundation.html' %}
+{% load static %}
 
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
 <body id="signup_body">
+    <img id="pp_logo" class="d-block mx-auto mb-4" src="{% static 'pp-logo.png' %}" alt="Player Portfolio" height=120px>
     <div id="form_container">
         <form id="signup_form" method="post">
             {% csrf_token %}
