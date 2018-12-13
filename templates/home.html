@@ -22,15 +22,17 @@
                 <a class="btn btn-outline-light" href="{% url 'logout' %}">Log Out</a>
         </div>
         <div class="m-md-5">
-            <div class="jumbotron p-md-5">
-              <div class="text-center">
+            <div class="jumbotron p-md-5 bg-dark">
+              <div class="text-center text-white">
                 <h3 class="">Thanks {{user.first_name}} for signing up!</h3>
                 <p class="lead font-weight-normal">You have been added to our waitlist! We will let you know when we launch our official beta.</p>
               </div>
-              <div class="text-center">
+              <div class="text-center text-white">
                   <p class="lead font-weight-normal">Share the platform with your friends!</p>
-                  <a href="">Facebook</a>
-                  <a href="">Twitter</a>
+                  <a class="text-white" href="https://twitter.com/PlayerMarkets">Facebook 
+                    <img src="{% static 'flogo_RGB_HEX-72.svg' %}" alt="facebook" height="30px"></a>
+                  <p>    </p>
+                  <a class="text-white" href="https://facebook.com/PlayerMarkets">Twitter <img src="{% static 'Twitter_Logo_WhiteOnBlue.svg' %}" alt="twitter" height="30px"></a>
               </div>
               </div>
         </div>
@@ -96,9 +98,9 @@
                     display: inline-block;
                     height: 100%;
                     vertical-align: middle;"></span>
-                    <img src="{% static 'stocks@2x.png' %}" alt="Player Portfolio feature 2 image" style="
+                    <img class="" src="{% static 'feature2@2x.png' %}" alt="Player Portfolio feature 2 image" style="
                     max-width: 90%;
-                    max-height:100%;
+                    max-height:90%;
                     vertical-align: middle;
                 ">
                   </div>
@@ -119,13 +121,13 @@
                     </div>
                   </div>
                 </div>
-                <img class="my-3" src="{% static 'football-player-up@2x.png' %}" alt="football player" style="
+                <img class="my-3" src="{% static 'football-player-up@2x.jpg' %}" alt="football player" style="
                 max-width: 90%;
                 max-height:100%;
                 vertical-align: middle;
                 border-radius: 15px;
               ">
-              <h4 class="">Then buy at the lowest price possible and sell later.</h4>
+              <h4 class="">Then <b class="text-success">buy</b> at the lowest price possible and sell later.</h4>
             </div>
               <div class="col mx-auto" style="width: 80%; border-radius: 21px 21px 0 0;">
                 <div class="card bg-danger mx-3 mt-5 mb-3">
@@ -135,13 +137,13 @@
                     </div>
                   </div>
                 </div>
-                <img class="my-3" src="{% static 'football-player-down@2x.png' %}" alt="football player" style="
+                <img class="my-3" src="{% static 'football-player-down@2x.jpg' %}" alt="football player" style="
                       max-width: 90%;
                       max-height:100%;
                       vertical-align: middle;
                       border-radius: 15px;
                     ">
-                <h4 class="">Then sell at the highest price possible and possibly buy back later.</h4>
+                <h4 class="">Then <b class="text-danger">sell</b> at the highest price possible and buy back later.</h4>
               </div>
             </div>
               <div class="card bg-primary mx-3 my-5">
@@ -155,7 +157,7 @@
                 <div class="text-center">
                   <h3>Player Market</h3>
                 </div>
-                <table class="table">
+                <!-- <table class="table">
                   <thead class="thead-light">
                     <tr>
                       <th scope="col">Name</th>
@@ -200,9 +202,17 @@
                       <td>11.00%</td>
                     </tr>
                   </tbody>
-                </table>
+                </table> -->
+                <img src="{% static 'player-market.jpg' %}" alt="player-market" style="max-width: 100%;">
               </div>
-              <h4 class="">Lastly, close your position either during or at the end of the season.</h4>
+              <!-- <h4 class="">Lastly, close your position either during or at the end of the season.</h4> -->
+              <div class="card bg-primary mx-3 my-5">
+                  <div class="card-body">
+                    <div class="card-text">
+                      <h4 class="text-light my-0">Lastly, close your position either during or at the end of the season.</h4>
+                    </div>
+                  </div>
+                </div>
           </div>
         </div>
         
@@ -254,8 +264,8 @@
                 <div class="col-md-8 p-lg-5 mx-auto">
                   <h2 class="display-4 font-weight-bold mb-5">Frequently Asked Questions</h2>
                     <div id="faq" class="mb-5">
-                      <h5 class="text-justify font-weight-bold">What is Player Portfolio?</h5>
-                      <p class="text-justify lead font-weight-normal">Player Portfolio is an open market that allows you to invest in a fantasy player’s <u>season production</u> by buying or selling “Shares” of that player. Player Portfolio is unique because it allows you to buy or sell any <u>player</u> at any timethroughout the season.</p>
+                      <h5 class="text-justify font-weight-bold">What Is Player Portfolio?</h5>
+                      <p class="text-justify lead font-weight-normal">Player Portfolio is an open market that allows you to invest in a fantasy player’s <b>season production</b> by buying or selling “Shares” of that player. Player Portfolio is unique because it allows you to buy or sell <b>any player at any time</b> throughout the season.</p>
                     </div>
                     <div class="mb-5">
                       <h5 class="text-justify font-weight-bold">What Sports Are Available?</h5>
@@ -263,10 +273,10 @@
                     </div>
                     <div class="mb-5">
                       <h5 class="text-justify font-weight-bold">How Does It Work?</h5>
-                      <p class="text-justify lead font-weight-normal">Player Portfolio is an open market,so it requires that a buyer agrees with a seller to trade a player at an agreed uponprice. The buyer then owns the right to that player’s “Share”. The seller receives the amount that the buyer was willing to pay for that “Share”.</p>
+                      <p class="text-justify lead font-weight-normal">Player Portfolio is an open market, so it requires that a buyer agrees with a seller to trade a player at an agreed upon price. The buyer then owns the right to that player’s “Share”. The seller receives the amount that the buyer was willing to pay for that “Share”.</p>
                     </div>
                     <div class="mb-5">
-                      <h5 class="text-justify font-weight-bold">How are player shares calculated?</h5>
+                      <h5 class="text-justify font-weight-bold">How Are Player Share Values Calculated?</h5>
                       <p class="text-justify lead font-weight-normal">The value of a “Share” of a player is directly related to the amount of points that player scores in that season. The relation of fantasy points to real dollars varies by sport:</p>
                       <p class="text-justify"><h7 class="font-weight-bold">NFL:</h7> 100 Fantasy Points = $1.00 USD</p>
                       <p class="text-justify"><h7 class="font-weight-bold">NBA:</h7> 1,000 Fantasy Points = $1.00 USD</p>
@@ -279,16 +289,17 @@
                     </div>
                     <div class="mb-5">
                       <h5 class="text-justify font-weight-bold">How Can I Sell Shares Without Already Owning Them?</h5>
-                      <p class="text-justify lead font-weight-normal">This is often referred to in the investing world as “Short Selling” or borrowing money to sell the sharesnowand then buying back the shares during or at the end of the season. The reason for this is if a player’s price is higher than you think it should be and you don’t already have shares of that player, you can “Short Sell” that player which means you’re selling the shares at the current price but have to buy back the shareslater, at a price that you think will be cheaper.</p>
+                      <p class="text-justify lead font-weight-normal">This is often referred to in the investing world as <b>“Short Selling”</b> or borrowing money to sell the sharesnowand then buying back the shares during or at the end of the season. The reason for this is if a player’s price is higher than you think it should be and you don’t already have shares of that player, you can “Short Sell” that player which means you’re selling the shares at the current price but have to buy back the shares later, at a price that you think will be cheaper.</p>
                     </div>
                     <div class="mb-5">
                       <h5 class="text-justify font-weight-bold">How Much Money Can I Make?</h5>
                       <p class="text-justify lead font-weight-normal">Player Portfolio is speculative and is considered sports gambling. However, you can make a high return on your money if you pick the right players. The difference between the share value at the end of the season (or earlier if you wish to close your position to realize profits) and the price you paid for the 
-                        share is your profit or loss. Buying underrated players or “selling short” overrated players can result in consistent profits. Player Portfolio takes the week-to-week randomness out of fantasy sports gambling.</p>
+                        share is your profit or loss. Buying underrated players or “selling short” overrated players can result in consistent profits. <b class="text-primary">Player Portfolio takes the week-to-week randomness out of fantasy sports gambling.</b></p>
                     </div>
                     <div class="mb-5">
                       <h5 class="text-justify font-weight-bold">Have More Questions That We Didn’t Answer For You?</h5>
                       <p class="text-justify lead font-weight-normal">Send us an email with your questions and we’ll reach out to you to answer them and add them to this list.</p>
+                      <a class="" href="mailto:playerportfoliollc@gmail.com">PlayerPortfolioLLC@gmail.com</a>
                     </div>
                 </div>
               </div>
@@ -300,7 +311,7 @@
                     <img src="{% static 'pp-logo.png' %}" height="48" alt="Player Portfolio Logo">
                     <small class="d-block mb-3 text-light">© 2018</small>
                   </div>
-                  <div class="col-6 col-md">
+                  <!-- <div class="col-6 col-md">
                     <h5 class="text-white">Company</h5>
                     <ul class="list-unstyled text-small">
                       <li><a class="text-light" href="#">About</a></li>
@@ -314,19 +325,19 @@
                       <li><a class="text-light" href="#">Terms of Use</a></li>
                       <li><a class="text-light" href="#">Privacy Policy</a></li>
                     </ul>
-                  </div>
+                  </div> -->
                   <div class="col-6 col-md">
                     <h5 class="text-white">Social Media</h5>
                     <ul class="list-unstyled text-small">
-                      <li><a class="text-light" href="#">Facebook</a></li>
-                      <li><a class="text-light" href="#">Instagram</a></li>
-                      <li><a class="text-light" href="#">Twitter</a></li>
+                      <li><a class="text-light" href="https://facebook.com/PlayerMarkets">Facebook</a></li>
+                      <li><a class="text-light" href="https://www.instagram.com/playermarkets">Instagram</a></li>
+                      <li><a class="text-light" href="https://twitter.com/PlayerMarkets">Twitter</a></li>
                     </ul>
                   </div>
                   <div class="col-6 col-md">
                         <h5 id="support" class="text-white">Support</h5>
                         <ul class="list-unstyled text-small">
-                            <li><a class="text-light" href="mailto:playerportfoliollc@gmail.com">playerportfoliollc@gmail.com</a></li>
+                            <li><a class="text-light" href="mailto:playerportfoliollc@gmail.com">PlayerPortfolioLLC@gmail.com</a></li>
                         </ul>
                   </div>
                 </div>
