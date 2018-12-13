@@ -5,10 +5,11 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-    <body>
+    <body style="margin-left: 0;
+    margin-right: 0">
         <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-dark">
                 <nav class="my-0 mr-md-auto">
-                    <a class="navbar-brand text-light" href="{% url 'home' %}">
+                    <a class="navbar-brand text-light" href="{% url 'logout' %}">
                         <img id="landing_page_emblem" src="{% static 'pp_emblem.png' %}" width="" height="30" class="d-inline-block align-top" alt="">
                         <b>Player Portfolio</b>
                         <span class="badge badge-pill badge-warning">beta</span>
@@ -28,18 +29,20 @@
                 <p class="lead font-weight-normal">You have been added to our waitlist! We will let you know when we launch our official beta.</p>
               </div>
               <div class="text-center text-white">
-                  <p class="lead font-weight-normal">Share the platform with your friends!</p>
-                  <a class="text-white" href="https://twitter.com/PlayerMarkets">Facebook 
+                  <h3 class="pt-2 pb-2">Share the platform with your friends!</h3>
+                  <a class="text-white mx-3" href="https://facebook.com/PlayerMarkets">Facebook  
                     <img src="{% static 'flogo_RGB_HEX-72.svg' %}" alt="facebook" height="30px"></a>
-                  <p>    </p>
-                  <a class="text-white" href="https://facebook.com/PlayerMarkets">Twitter <img src="{% static 'Twitter_Logo_WhiteOnBlue.svg' %}" alt="twitter" height="30px"></a>
+                  <!-- <p>    </p> -->
+                  <a class="text-white mx-3" href="https://twitter.com/PlayerMarkets">Twitter  <img src="{% static 'Twitter_Logo_WhiteOnBlue.svg' %}" alt="twitter" height="30px"></a>
+                  <a class="text-white mx-3" href="https://www.instagram.com/playermarkets">Instagram <img src="{% static 'instagram-icon.png' %}" alt="twitter" height="30px"></a>
               </div>
-              </div>
+            </div>
         </div>
     </body>
 {% else %}
     {% block landing_page %}
-    <body>
+    <body style="margin-left: 0;
+    margin-right: 0">
         <!-- Navigation -->
         <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-dark">
             <nav class="my-0 mr-md-auto">
@@ -50,10 +53,10 @@
                 </a>
             </nav>    
             <nav class="my-2 my-md-0 mr-md-3">
-                <a class="p-2 text-light" href="#how_it_works">How It Works</a>
-                <a class="p-2 text-light" href="#scoring">Scoring</a>
-                <a class="p-2 text-light" href="#faq">FAQ</a>
-                <a class="p-2 text-light" href="#support">Support</a>
+                <a class="p-2 text-light" href="#how_it_works"><u>How It Works</u></a>
+                <a class="p-2 text-light" href="#scoring"><u>Scoring</u></a>
+                <a class="p-2 text-light" href="#faq"><u>FAQ</u></a>
+                <a class="p-2 text-light" href="#support"><u>Support</u></a>
             </nav>
             <a class="btn btn-outline-light" href="{% url 'login' %}">Log In</a>
         </div>
@@ -157,55 +160,8 @@
                 <div class="text-center">
                   <h3>Player Market</h3>
                 </div>
-                <!-- <table class="table">
-                  <thead class="thead-light">
-                    <tr>
-                      <th scope="col">Name</th>
-                      <th scope="col">Position</th>
-                      <th scope="col">Fantasy Points</th>
-                      <th scope="col">Current Price</th>
-                      <th scope="col">Shares</th>
-                      <th scope="col">Highest Buyer</th>
-                      <th scope="col">Lowest Seller</th>
-                      <th scope="col">Season Return</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Aaron Rodgers</td>
-                      <td>QB</td>
-                      <td>266.67</td>
-                      <td>$2.65</td>
-                      <td>548</td>
-                      <td>$2.60</td>
-                      <td>$2.70</td>
-                      <td>10.00%</td>
-                    </tr>
-                    <tr>
-                      <td>Todd Gurley</td>
-                      <td>RB</td>
-                      <td>333.33</td>
-                      <td>$2.85</td>
-                      <td>853</td>
-                      <td>$2.70</td>
-                      <td>$2.90</td>
-                      <td>9.00%</td>
-                    </tr>
-                    <tr>
-                      <td>Tom Brady</td>
-                      <td>QB</td>
-                      <td>250</td>
-                      <td>$2.50</td>
-                      <td>389</td>
-                      <td>$2.30</td>
-                      <td>$2.50</td>
-                      <td>11.00%</td>
-                    </tr>
-                  </tbody>
-                </table> -->
                 <img src="{% static 'player-market.jpg' %}" alt="player-market" style="max-width: 100%;">
               </div>
-              <!-- <h4 class="">Lastly, close your position either during or at the end of the season.</h4> -->
               <div class="card bg-primary mx-3 my-5">
                   <div class="card-body">
                     <div class="card-text">
@@ -265,7 +221,7 @@
                   <h2 class="display-4 font-weight-bold mb-5">Frequently Asked Questions</h2>
                     <div id="faq" class="mb-5">
                       <h5 class="text-justify font-weight-bold">What Is Player Portfolio?</h5>
-                      <p class="text-justify lead font-weight-normal">Player Portfolio is an open market that allows you to invest in a fantasy player’s <b>season production</b> by buying or selling “Shares” of that player. Player Portfolio is unique because it allows you to buy or sell <b>any player at any time</b> throughout the season.</p>
+                      <p class="text-justify lead font-weight-normal">Player Portfolio is an open market that allows you to invest in a fantasy player’s <b class="text-primary">season production</b> by buying or selling “Shares” of that player. Player Portfolio is unique because it allows you to buy or sell <b class="text-primary">any player at any time</b> throughout the season.</p>
                     </div>
                     <div class="mb-5">
                       <h5 class="text-justify font-weight-bold">What Sports Are Available?</h5>
@@ -289,59 +245,34 @@
                     </div>
                     <div class="mb-5">
                       <h5 class="text-justify font-weight-bold">How Can I Sell Shares Without Already Owning Them?</h5>
-                      <p class="text-justify lead font-weight-normal">This is often referred to in the investing world as <b>“Short Selling”</b> or borrowing money to sell the sharesnowand then buying back the shares during or at the end of the season. The reason for this is if a player’s price is higher than you think it should be and you don’t already have shares of that player, you can “Short Sell” that player which means you’re selling the shares at the current price but have to buy back the shares later, at a price that you think will be cheaper.</p>
+                      <p class="text-justify lead font-weight-normal">This is often referred to in the investing world as <b class="text-primary">“Short Selling”</b> or borrowing money to sell the sharesnowand then buying back the shares during or at the end of the season. The reason for this is if a player’s price is higher than you think it should be and you don’t already have shares of that player, you can “Short Sell” that player which means you’re selling the shares at the current price but have to buy back the shares later, at a price that you think will be cheaper.</p>
                     </div>
                     <div class="mb-5">
                       <h5 class="text-justify font-weight-bold">How Much Money Can I Make?</h5>
                       <p class="text-justify lead font-weight-normal">Player Portfolio is speculative and is considered sports gambling. However, you can make a high return on your money if you pick the right players. The difference between the share value at the end of the season (or earlier if you wish to close your position to realize profits) and the price you paid for the 
                         share is your profit or loss. Buying underrated players or “selling short” overrated players can result in consistent profits. <b class="text-primary">Player Portfolio takes the week-to-week randomness out of fantasy sports gambling.</b></p>
                     </div>
-                    <div class="mb-5">
+                    <div class="mb-4">
                       <h5 class="text-justify font-weight-bold">Have More Questions That We Didn’t Answer For You?</h5>
                       <p class="text-justify lead font-weight-normal">Send us an email with your questions and we’ll reach out to you to answer them and add them to this list.</p>
                       <a class="" href="mailto:playerportfoliollc@gmail.com">PlayerPortfolioLLC@gmail.com</a>
                     </div>
+                    <a class="btn btn-primary" href="{% url 'signup' %}">Sign Up</a>
                 </div>
               </div>
 
         <!-- Footer -->
-        <footer class="bg-dark fluid-container py-5">
-                <div class="text-center row">
-                  <div class="col-12 col-md">
-                    <img src="{% static 'pp-logo.png' %}" height="48" alt="Player Portfolio Logo">
-                    <small class="d-block mb-3 text-light">© 2018</small>
-                  </div>
-                  <!-- <div class="col-6 col-md">
-                    <h5 class="text-white">Company</h5>
-                    <ul class="list-unstyled text-small">
-                      <li><a class="text-light" href="#">About</a></li>
-                      <li><a class="text-light" href="#">Careers</a></li>
-                      <li><a class="text-light" href="#">Press</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-6 col-md">
-                    <h5 class="text-white">Notices</h5>
-                    <ul class="list-unstyled text-small">
-                      <li><a class="text-light" href="#">Terms of Use</a></li>
-                      <li><a class="text-light" href="#">Privacy Policy</a></li>
-                    </ul>
-                  </div> -->
-                  <div class="col-6 col-md">
-                    <h5 class="text-white">Social Media</h5>
-                    <ul class="list-unstyled text-small">
-                      <li><a class="text-light" href="https://facebook.com/PlayerMarkets">Facebook</a></li>
-                      <li><a class="text-light" href="https://www.instagram.com/playermarkets">Instagram</a></li>
-                      <li><a class="text-light" href="https://twitter.com/PlayerMarkets">Twitter</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-6 col-md">
-                        <h5 id="support" class="text-white">Support</h5>
-                        <ul class="list-unstyled text-small">
-                            <li><a class="text-light" href="mailto:playerportfoliollc@gmail.com">PlayerPortfolioLLC@gmail.com</a></li>
-                        </ul>
-                  </div>
-                </div>
-              </footer>
+        <footer class="bg-dark fluid-container text-center pt-5 pb-3">
+          <img src="{% static 'pp-logo.png' %}" height="120" alt="Player Portfolio Logo">
+          <h3 id="support" class="text-white pt-4 pb-2">Support</h3>
+          <ul class="list-unstyled text-small">
+              <li><a class="text-light" href="mailto:playerportfoliollc@gmail.com">PlayerPortfolioLLC@gmail.com</a></li>
+              <li><a class="text-light" href="https://facebook.com/PlayerMarkets">Facebook</a></li>
+              <li><a class="text-light" href="https://www.instagram.com/playermarkets">Instagram</a></li>
+              <li><a class="text-light" href="https://twitter.com/PlayerMarkets">Twitter</a></li>
+          </ul>
+        </div>
+      </footer>
     </body>
     {% endblock %}
 {% endif %}
