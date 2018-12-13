@@ -49,14 +49,14 @@
         </div>
 
         <!-- Masthead -->
-        <div id="masthead" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="">
-                <div class="col-md-5 p-lg-5 mx-auto my-5">
-                  <h1 class="display-4 font-weight-bold">Fantasy Sports.</h1>
-                  <h1 class="display-4 font-weight-bold">Elevated.</h1>
-                  <p class="lead font-weight-normal">The marketplace for a fantasy player's real value.</p>
-                  <a class="btn btn-primary" href="{% url 'signup' %}">Sign Up</a>
-                </div>
-              </div>
+        <div id="masthead" class="jumbotron jumbotron-fluid position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center" style="background-image: url({% static 'masthead.svg' %}); background-repeat: no-repeat; background-position: bottom; background-size: 70%;">
+          <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 font-weight-bold">Fantasy Sports.</h1>
+            <h1 class="display-4 font-weight-bold">Elevated.</h1>
+            <p class="lead font-weight-normal">The marketplace for a fantasy player's real value.</p>
+            <a class="btn btn-primary" href="{% url 'signup' %}">Sign Up</a>
+          </div>
+        </div>
         
 
         <!-- Features -->
@@ -98,21 +98,114 @@
               </div>
 
         <!-- How It Works -->
-        <div id="how_it_works" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="">
-                <div class="col-md-5 p-lg-5 mx-auto my-5">
-                  <h2 class="display-4 font-weight-bold">How It Works</h2>
-                  <!-- TODO -->
+        <div id="how_it_works" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+          <div class="col-md-10 p-lg-5 mx-auto">
+            <h2 class="display-4 font-weight-bold mb-5">How It Works</h2>
+            <h4 class="">Think a Fantasy Player is...</h4>
+            <div class="row">
+              <div class="col mx-auto" style="width: 80%; border-radius: 21px 21px 0 0;">
+                <div class="card bg-success mx-3 mt-5 mb-3">
+                  <div class="card-body">
+                    <div class="card-text">
+                      <h4 class="text-light my-0">Underrated</h4>
+                    </div>
+                  </div>
+                </div>
+                <img class="my-3" src="{% static 'football-player-up@2x.png' %}" alt="football player" style="
+                max-width: 90%;
+                max-height:100%;
+                vertical-align: middle;
+                border-radius: 15px;
+              ">
+              <h4 class="">Then buy at the lowest price possible and sell later.</h4>
+            </div>
+              <div class="col mx-auto" style="width: 80%; border-radius: 21px 21px 0 0;">
+                <div class="card bg-danger mx-3 mt-5 mb-3">
+                  <div class="card-body">
+                    <div class="card-text">
+                      <h4 class="text-light my-0">Overrated</h4>
+                    </div>
+                  </div>
+                </div>
+                <img class="my-3" src="{% static 'football-player-down@2x.png' %}" alt="football player" style="
+                      max-width: 90%;
+                      max-height:100%;
+                      vertical-align: middle;
+                      border-radius: 15px;
+                    ">
+                <h4 class="">Then sell at the highest price possible and possibly buy back later.</h4>
+              </div>
+            </div>
+              <div class="card bg-primary mx-3 my-5">
+                <div class="card-body">
+                  <div class="card-text">
+                    <h4 class="text-light my-0">Find someone to take the other side of the deal in the Player Market</h4>
+                  </div>
                 </div>
               </div>
+              <div class="mx-3 mb-4">
+                <div class="text-center">
+                  <h3>Player Market</h3>
+                </div>
+                <table class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Position</th>
+                      <th scope="col">Fantasy Points</th>
+                      <th scope="col">Current Price</th>
+                      <th scope="col">Shares</th>
+                      <th scope="col">Highest Buyer</th>
+                      <th scope="col">Lowest Seller</th>
+                      <th scope="col">Season Return</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Aaron Rodgers</td>
+                      <td>QB</td>
+                      <td>266.67</td>
+                      <td>$2.65</td>
+                      <td>548</td>
+                      <td>$2.60</td>
+                      <td>$2.70</td>
+                      <td>10.00%</td>
+                    </tr>
+                    <tr>
+                      <td>Todd Gurley</td>
+                      <td>RB</td>
+                      <td>333.33</td>
+                      <td>$2.85</td>
+                      <td>853</td>
+                      <td>$2.70</td>
+                      <td>$2.90</td>
+                      <td>9.00%</td>
+                    </tr>
+                    <tr>
+                      <td>Tom Brady</td>
+                      <td>QB</td>
+                      <td>250</td>
+                      <td>$2.50</td>
+                      <td>389</td>
+                      <td>$2.30</td>
+                      <td>$2.50</td>
+                      <td>11.00%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4 class="">Lastly, close your position either during or at the end of the season.</h4>
+          </div>
+        </div>
         
         <!-- Scoring -->
         <div id="scoring" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white bg-dark">
-          <div class="col-md-5 p-lg-5 mx-auto">
+          <div class="col-md-5 p-x-5 pt-5 mx-auto">
             <h2 class="display-4 font-weight-bold">Scoring</h2>
           </div>
-          <div class="card-group mb-5">
-          <div class="row mx-auto">
-            <div class="card text-light border-light bg-dark mb-3 mx-3" style="max-width: 18rem;">
+          <div class="card-group mt-5 mb-5">
+          <div class="row mx-auto justify-content-center">
+            <div class="card text-light border-light bg-dark mb-3 mx-3" style="max-width: 13rem;">
               <div class="card-body">
                 <h2 class="card-title">Football</h2>
                 <p class="card-text lead font-weight-normal">$1.00 value</p>
@@ -120,7 +213,7 @@
                 <p class="card-text lead font-weight-normal">100 fantasy points</p>
               </div>
             </div>
-            <div class="card text-light border-light bg-dark mb-3 mx-3" style="max-width: 18rem;">
+            <div class="card text-light border-light bg-dark mb-3 mx-3" style="max-width: 13rem;">
               <div class="card-body">
                 <h2 class="card-title">Basketball</h2>
                 <p class="card-text lead font-weight-normal">$1.00 value</p>
@@ -128,7 +221,7 @@
                 <p class="card-text lead font-weight-normal">1,000 fantasy points</p>
               </div>
             </div>
-            <div class="card text-light border-light bg-dark mb-3 mx-3" style="max-width: 18rem;">
+            <div class="card text-light border-light bg-dark mb-3 mx-3" style="max-width: 13rem;">
               <div class="card-body">
                 <h2 class="card-title">Hockey</h2>
                 <p class="card-text lead font-weight-normal">$1.00 value</p>
@@ -136,7 +229,7 @@
                 <p class="card-text lead font-weight-normal">100 fantasy points</p>
               </div>
             </div>
-            <div class="card text-light border-light bg-dark mb-3 mx-3" style="max-width: 18rem;">
+            <div class="card text-light border-light bg-dark mb-3 mx-3" style="max-width: 13rem;">
               <div class="card-body">
                 <h2 class="card-title">Baseball</h2>
                 <p class="card-text lead font-weight-normal">$1.00 value</p>
@@ -150,7 +243,7 @@
 
         <!-- FAQ -->
         <div id="faq" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="">
-                <div class="col-md-8 p-lg-5 mx-auto my-5">
+                <div class="col-md-8 p-lg-5 mx-auto">
                   <h2 class="display-4 font-weight-bold mb-5">Frequently Asked Questions</h2>
                     <div id="faq" class="mb-5">
                       <h5 class="text-justify font-weight-bold">What is Player Portfolio?</h5>

@@ -7,6 +7,10 @@
   max-width: 960px;
 }
 
+#background_image {
+  background-color: red;
+}
+
 /*
  * Custom translucent site header
  */
@@ -48,7 +52,3 @@
 }
 
 .overflow-hidden {overflow: hidden;}
-
-#feature_two {
-  height: 10px;
-}

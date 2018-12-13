@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040.45 567.007">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffc107;
+      }
+
+      .cls-2 {
+        fill: #424242;
+      }
+    </style>
+  </defs>
+  <g id="Group_8" data-name="Group 8" transform="translate(-412.158 1185.568)">
+    <g id="Group_7" data-name="Group 7">
+      <g id="Group_6" data-name="Group 6" transform="translate(29)">
+        <g id="Group_5" data-name="Group 5">
+          <g id="Group_4" data-name="Group 4" transform="translate(-5405.41 -192.289)">
+            <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-1" width="34.451" height="1039.584" rx="17.226" transform="translate(6828.584 -618.712) rotate(90)"/>
+            <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-1" width="41.577" height="61.124" rx="20.789" transform="translate(6329.581 -540.363) rotate(180)"/>
+            <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-2" width="52.602" height="139.848" rx="9" transform="translate(6335.187 -426.271) rotate(180)"/>
+            <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-1" width="34.45" height="408.584" rx="17.225" transform="translate(6829.018 -584.695) rotate(-180)"/>
+            <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-1" width="34.45" height="408.584" rx="17.225" transform="translate(5823.018 -584.695) rotate(-180)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
