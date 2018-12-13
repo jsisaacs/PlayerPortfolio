@@ -21,11 +21,19 @@
                 </nav>
                 <a class="btn btn-outline-light" href="{% url 'logout' %}">Log Out</a>
         </div>
-        <p>{{ user.first_name }}</p>
-        <p>{{ user.last_name }}</p>
-        <p>{{ user.username }}</p>
-        <p>{{ user.email }}</p>
-        <p>{{ user.date_joined }}</p>
+        <div class="m-md-5">
+            <div class="jumbotron p-md-5">
+              <div class="text-center">
+                <h3 class="">Thanks {{user.first_name}} for signing up!</h3>
+                <p class="lead font-weight-normal">You have been added to our waitlist! We will let you know when we launch our official beta.</p>
+              </div>
+              <div class="text-center">
+                  <p class="lead font-weight-normal">Share the platform with your friends!</p>
+                  <a href="">Facebook</a>
+                  <a href="">Twitter</a>
+              </div>
+              </div>
+        </div>
     </body>
 {% else %}
     {% block landing_page %}
@@ -318,9 +326,7 @@
                   <div class="col-6 col-md">
                         <h5 id="support" class="text-white">Support</h5>
                         <ul class="list-unstyled text-small">
-                            <address>
-                                <!-- TODO -->
-                            </address>
+                            <li><a class="text-light" href="mailto:playerportfoliollc@gmail.com">playerportfoliollc@gmail.com</a></li>
                         </ul>
                   </div>
                 </div>
